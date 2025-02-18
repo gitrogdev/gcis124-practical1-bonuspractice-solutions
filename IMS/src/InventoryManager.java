@@ -28,8 +28,8 @@
  * 1. **PerishableProduct**
  *    - Has an additional attribute: `int shelfLife`, representing the number of days 
  *      remaining before expiration.
- *    - Overrides `getTotalValue()` so that if the product has at least three days 
- *      until expiration, its total value is reduced by 20%.
+ *    - Overrides `getTotalValue()` so that if the product is within days of its
+ *      expiration, its total value is reduced by 20%.
  * 
  * 2. **ElectronicProduct**
  *    - Has an additional attribute: `int warrantyPeriod`, representing the warranty 
@@ -50,7 +50,6 @@
  *   - Call `getTotalValue()` for each product.
  *   - Print the product’s name and its total stock value.
  *   - If the array is empty or null, print `"No products in inventory."`
-
  */
 
 public class InventoryManager {
