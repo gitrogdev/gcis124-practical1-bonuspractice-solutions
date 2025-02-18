@@ -28,8 +28,8 @@
  * 1. **PerishableProduct**
  *    - Has an additional attribute: `int shelfLife`, representing the number of days 
  *      remaining before expiration.
- *    - Overrides `getTotalValue()` so that if the product is within days of its
- *      expiration, its total value is reduced by 20%.
+ *    - Overrides `getTotalValue()` so that if the product is within three days
+ *      of its expiration, its total value is reduced by 20%.
  * 
  * 2. **ElectronicProduct**
  *    - Has an additional attribute: `int warrantyPeriod`, representing the warranty 
