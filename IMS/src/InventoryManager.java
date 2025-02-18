@@ -35,6 +35,9 @@
  *    - Has an additional attribute: `int warrantyPeriod`, representing the warranty 
  *      length in months.
  *    - Uses the standard `getTotalValue()` calculation without any discounts.
+ *    - Add a method `getWarrantyStatus()` that:
+ *       - Returns a string `"Warranty valid for X months"` if the warranty is still valid.
+ *       - Returns `"Warranty expired"` if the warranty has expired (i.e., warrantyPeriod <= 0).
  * 
  * Part C: Inventory Processing
  * ----------------------------
@@ -50,7 +53,22 @@
  */
 
 public class InventoryManager {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    /**
+     * Prints out an inventory of all the products and their total values to
+     * the command line
+     * @param products An array of products
+     */
+    public static void printInventorySummary(Product[] products) {
+        if (products == null || products.length == 0) {
+            System.out.println("No products in inventory");
+            return;
+        }
+
+        for (Product product: products) {
+            System.out.printf(
+                "Product: %s | Total Value %.2f\n",
+                product.getName(), product.getTotalValue()
+            );
+        }
     }
 }
