@@ -35,6 +35,9 @@
  *    - Has an additional attribute: `int warrantyPeriod`, representing the warranty 
  *      length in months.
  *    - Uses the standard `getTotalValue()` calculation without any discounts.
+ *    - Add a method `getWarrantyStatus()` that:
+ *       - Returns a string `"Warranty valid for X months"` if the warranty is still valid.
+ *       - Returns `"Warranty expired"` if the warranty has expired (i.e., warrantyPeriod <= 0).
  * 
  * Part C: Inventory Processing
  * ----------------------------
@@ -47,6 +50,7 @@
  *   - Call `getTotalValue()` for each product.
  *   - Print the product’s name and its total stock value.
  *   - If the array is empty or null, print `"No products in inventory."`
+
  */
 
 public class InventoryManager {
